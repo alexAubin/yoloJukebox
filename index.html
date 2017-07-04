@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head>
+  <title>The Yolo Jukebox</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <style>
+    @font-face {
+      font-family: yoloFont;
+      src: url(yolo.otf);
+    }
+
+    h1 {
+      color: #fff;
+      padding: .5em .5em .7em;
+      font-size: 4em;
+      margin: 0;
+      animation: disco .5s ease infinite;
+    }
+
+    #comeoncontrols {
+      clear: left;
+      padding-top: 2em;
+    }
+
+    html, body {
+      font-family: yoloFont, sans;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-color: #ee92a7;
+      text-align: center;
+      border: 32px solid #fff;
+      border-color: #ff0051 #fff #cc4c6a #cc1741;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      animation: disco2 2s ease infinite;
+    }
+
+    ul {
+      margin: 0 auto;
+      padding: 0;
+      width: 80%;
+      text-align: center;
+    }
+
+    li {
+      list-style-type: none;
+      float: left;
+    }
+
+    li a {
+      font-size: 2em;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6em 1em;
+      background-color: #000;
+      margin: 5px;
+      border: 5px solid #fff;
+      box-shadow: 5px 5px 2px #333;
+      outline-width: 0;
+    }
+
+    li a:hover {
+      background-color: #fff;
+      border-color: #000;
+      color: #000;
+    }
+
+    li a:active {
+      box-shadow: none;
+      text-shadow: 3px 1px pink;
+      margin: 10px 0 0 10px;
+      box-shadow: inset 3px 3px 5px pink;
+    }
+
+    @keyframes disco {
+      0% {
+        border-color: #0d0f2c;
+        color: #0d0f2c;
+      }
+
+      50% {
+        border-color: #fff;
+        color: #fff;
+      }
+
+      100% {
+        border-color: #cc4c6a;
+        color: #cc4c6a;
+      }
+    }
+
+    @keyframes disco2 {
+      25% {
+        border-color: #cc1741 #ff0051 #fff #cc4c6a;
+      }
+
+      50% {
+        border-color: #cc4c6a #cc1741 #ff0051 #fff;
+      }
+
+      75% {
+        border-color: #fff #cc4c6a #cc1741 #ff0051;
+      }
+    }
+
+  </style>
+
+  <script>
+    function wsize() {
+      var body = document.getElementsByTagName('body')[0];
+
+      body.style.width = (window.innerWidth - 64) + 'px';
+      body.style.height = (window.innerHeight - 64) + 'px';
+    }
+
+    function playSound(i) {
+      document.getElementById(i).play();
+    }
+  </script>
+</head>
+
+<body onload="wsize()" onresize="wsize()" style="width: 1232px; height: 739px;">
+
+<h1>Yolo Jukebox</h1>
+
+<audio id="noice">
+  <source src="The%20Yolo%20Jukebox_files/noice.ogg" type="audio/ogg">
+Your browser does not support the audio element.
+</audio> 
+
+<audio id="hmm">
+  <source src="The%20Yolo%20Jukebox_files/hmm.ogg" type="audio/ogg">
+</audio> 
+
+<audio id="freifunk">
+  <source src="The%20Yolo%20Jukebox_files/freifunk.ogg" type="audio/ogg">
+</audio> 
+
+<audio id="itworks">
+  <source src="The%20Yolo%20Jukebox_files/itworks.ogg" type="audio/ogg">
+</audio> 
+
+<audio id="damned">
+  <source src="The%20Yolo%20Jukebox_files/damned.ogg" type="audio/ogg">
+</audio> 
+
+<audio id="hoo">
+  <source src="The%20Yolo%20Jukebox_files/hoo.ogg" type="audio/ogg">
+</audio> 
+
+<audio id="bulb">
+  <source src="The%20Yolo%20Jukebox_files/bulb.ogg" type="audio/ogg">
+</audio>
+
+<audio id="itsgone">
+  <source src="The%20Yolo%20Jukebox_files/itsgone.ogg" type="audio/ogg">
+</audio>
+
+<audio id="doesntwork">
+  <source src="The%20Yolo%20Jukebox_files/doesntwork.ogg" type="audio/ogg">
+</audio>
+ 
+<audio id="okay">
+  <source src="The%20Yolo%20Jukebox_files/okay.ogg" type="audio/ogg">
+</audio>
+
+<audio id="ookay">
+  <source src="The%20Yolo%20Jukebox_files/ookay.ogg" type="audio/ogg">
+</audio>
+
+<audio id="thankyou">
+  <source src="The%20Yolo%20Jukebox_files/thankyou.ogg" type="audio/ogg">
+</audio>
+
+<audio id="veryexpert">
+  <source src="The%20Yolo%20Jukebox_files/veryexpert.ogg" type="audio/ogg">
+</audio>
+
+<ul>
+  <li><a href="javascript:playSound('noice')">nice</a></li>
+  <li><a href="javascript:playSound('hmm')">hmm</a></li>
+  <li><a href="javascript:playSound('freifunk')">ha, Freifunk!</a></li>
+  <li><a href="javascript:playSound('damned')">damned it</a></li>
+  <li><a href="javascript:playSound('itworks')">yes! it works!</a></li>
+  <li><a href="javascript:playSound('hoo')">hoo</a></li>
+  <li><a href="javascript:playSound('bulb')">is it bulb?</a></li>
+  <li><a href="javascript:playSound('itsgone')">and, it's gone</a></li>
+  <li><a href="javascript:playSound('doesntwork')">doesn't work</a></li>
+  <li><a href="javascript:playSound('okay')">okay</a></li>
+  <li><a href="javascript:playSound('ookay')">oookay</a></li>
+  <li><a href="javascript:playSound('thankyou')">thank you anyway</a></li>
+  <li><a href="javascript:playSound('veryexpert')">i'm very expert</a></li>
+</ul>
+
+<div id="comeoncontrols">
+  Come on, Internet!<br>
+
+  <audio id="comeon" controls="controls" loop="">
+    <source src="The%20Yolo%20Jukebox_files/comeoninternet.ogg" type="audio/ogg">
+  </audio> 
+</div>
+
+
+
+</body></html>
